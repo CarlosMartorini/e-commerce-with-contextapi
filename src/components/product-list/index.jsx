@@ -9,25 +9,29 @@ const ProductList = ({type}) => {
     const { cart } = useContext(CartContext);
 
     return (
-        <ul>
+        <List>
             {
                 type === 'catalogue' &&
                 catalogue.map((item, index) => (
-                    <li key={index}>
+                    <Container key={index}>
                         {item.name}
+                        <img src={item.img} alt={item.name}/>
+                        <p>${item.price}</p>
                         <Button type={type} item={item}/>
-                    </li>
+                    </Container>
                 ))
             }
             {
                 type === 'cart' &&
                 cart.map((item, index) => (
-                    <li key={index}>
-                        {item.name} <Button type={type} item={item}/>
-                    </li>
+                    <Container key={index}>
+                        {item.name} 
+                        <img src={item.img} alt={item.name}/>
+                        <Button type={type} item={item}/>
+                    </Container>
                 ))
             }
-        </ul>
+        </List>
     )
 }
 

@@ -1,6 +1,7 @@
 import { useContext } from 'react';
-import { CartContext } from '../../providers';
-import { CatalogueContext } from '../../providers';
+import { CartContext } from '../../providers/cart';
+import { CatalogueContext } from '../../providers/catalogue';
+import { InteractButton } from './styles';
 
 const Button = ({type, item}) => {
     const { cart, addToCart, removeFromCart } = useContext(CartContext);
@@ -24,7 +25,7 @@ const Button = ({type, item}) => {
     };
 
     return (
-        <button onClick={handleClick}>{text}</button>
+        <InteractButton onClick={handleClick}>{text}</InteractButton>
     )
 }
 
