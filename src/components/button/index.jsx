@@ -1,6 +1,6 @@
 import { useContext } from 'react';
-import { CartContext } from '../../providers/cart';
-import { CatalogueContext } from '../../providers/catalogue';
+import { CartContext } from '../../providers';
+import { CatalogueContext } from '../../providers';
 
 const Button = ({type, item}) => {
     const { cart, addToCart, removeFromCart } = useContext(CartContext);
