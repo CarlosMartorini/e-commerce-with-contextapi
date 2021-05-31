@@ -1,11 +1,17 @@
-import './App.css';
+import ProductList from "./components/product-list";
+import { CatalogueProvider } from "./providers/catalogue";
+import { CartProvider } from "./providers/cart";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-
-      </header>
+      <CatalogueProvider>
+       <CartProvider>
+        <ProductList type="catalogue" />
+        <br/>
+        <ProductList type="cart" />
+      </CartProvider>
+     </CatalogueProvider>
     </div>
   );
 }
