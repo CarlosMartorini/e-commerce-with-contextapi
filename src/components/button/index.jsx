@@ -4,8 +4,8 @@ import { CatalogueContext } from '../../providers/catalogue';
 import { InteractButton } from './styles';
 
 const Button = ({type, item}) => {
-    const { cart, addToCart, removeFromCart } = useContext(CartContext);
-    const { catalogue, addToCatalogue, removeFromCatalogue } = useContext(CatalogueContext);
+    const { addToCart, removeFromCart } = useContext(CartContext);
+    const { addToCatalogue, removeFromCatalogue } = useContext(CatalogueContext);
 
     const text = type === 'catalogue' 
     ? (
