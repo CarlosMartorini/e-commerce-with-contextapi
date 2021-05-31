@@ -7,8 +7,9 @@ function App() {
     <div className="App">
       <CatalogueProvider>
        <CartProvider>
+         <h3>Catalogue</h3>
         <ProductList type="catalogue" />
-        <br/>
+        <h3>Cart</h3>
         <ProductList type="cart" />
       </CartProvider>
      </CatalogueProvider>
